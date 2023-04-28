@@ -1,0 +1,479 @@
+/* Cassandra Hirata */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+    /* fonts from: https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat  */
+    font-size: 16px;
+    --font: Montserrat, sans-serif;
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --darkGray: #222222;
+    --lightGray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+    --width: 100px;
+}
+*{
+    font-family: var(--font);
+    box-sizing: border-box;
+}
+/* ------ Skip Link ------ */
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+}
+#skip:focus{
+    position: static;
+    width: auto;
+    height: auto;
+}
+/* ------ Body Styles ------ */
+body{
+    font-family: var(--font);
+    color: var(--black);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* ------ Header Styles ------ */
+header{
+    background-image: linear-gradient(var(--teal), var(--white));
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+
+}
+header img{
+    width: 300px;
+    height: auto;
+}
+header h1, p{
+    display: inline-flex;
+}
+/* ------ Heading Styles ------ */
+h1{
+    font-weight: bold;
+    font-size: 50px;
+    /* text-align: left; */
+    padding: 10px;
+    margin: 0;
+}
+h2{
+    font-size: 40px;
+    padding: 10px;
+    margin: 0;
+}
+h3{
+    font-size: 30px;
+    padding: 10px;
+    margin: 0;
+}
+h1, h2, h3{
+    font-family: Molle, serif;
+}
+h4{
+    font-family: var(--font) ;
+}
+h2, h3{
+    font-weight: bold;
+    text-align: left;
+}
+/* ------ Menu Toggle Styles -------  */
+
+/* ------ Hidden Content Styles ------ */
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
+/* ------ Navigation Styles ------ */
+nav a{
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 200;
+    
+    
+}
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(4, 30px);
+    grid-gap: 5px;
+}
+nav li{
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    max-width: 100px;
+}
+
+/* ------ Link Styles ------ */
+a{
+    list-style-type: none;
+    padding: 5px;
+}
+/* ------ Image Styles ------ */
+img{
+    height: 200px;
+    max-width: 1100px;
+    padding: 0;
+    margin: 0;
+}
+#img-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+#img-grid > img{
+    width: 200px;
+}
+/* ------ Text Styles ------ */
+p{
+    padding: 5px 0;
+}
+/* ------ Main Styles ------ */
+main{
+    width: calc(100% - 2rem);
+    max-width: 1100px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+main article{
+    margin: 1rem auto;
+}
+/* ------ Article Styles ------ */
+#intro{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+article h2{
+    width: 50%;
+
+}
+article p{
+    max-width: 500px;
+    margin: 60px -160px
+    
+}
+article img{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    align-items: center;
+    grid-template-rows: repeat(2, 2fr);
+}
+
+/* ------ Plan Your Trip Styles ------ */
+#plan{
+    background-color: var(--yellow);
+    max-width: 1200px;
+    margin: 0;
+    padding: 10px;
+
+}
+#plan section{
+    background-color: var(--teal);
+    
+}
+#plan div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+#plan h4{
+    text-align: center;
+}
+#plan a{
+    max-width: 350px;
+}
+/* ------ testimonials Styles ------ */
+#testimonials{
+    padding: 25px;
+}
+#testimonials div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+#testimonials section{
+    text-align: center;
+}
+/* ------ about Styles ------ */
+#about{
+    background-color: var(--blue);
+    padding: 25px;
+}
+#about div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+#about section{
+    text-align: center;
+}
+/* ------ contact Styles ------ */
+input,
+textarea,
+select,
+button {
+  max-width: 350px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+section #contact{
+    text-align: center;
+}
+#contact{
+    width: 100%;
+}
+#contact div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+}
+#contact input#mySubmit{
+    background-color: var(--purple);
+    color: var(--white);
+    max-width: 350px;
+}
+#contact input, select{
+    border-color: var(--purple);
+}
+.radio-control{
+    color: var(--purple);
+}
+/* ------ Footer ------ */
+footer{
+    background-color: var(--lightGray);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr ;
+}
+footer p{
+    text-align: left;
+}
+footer a{
+    color: var(--black);
+    text-align: right;
+    text-decoration: none;
+}
+/* ------ Hover Styles ------ */
+@media (hover:hover) {
+    nav a:hover{
+        background-color: var(--yellow);
+    }
+    svg{
+        border-color: var(--blue);
+    }
+    footer a:hover{
+        color: var(--teal);
+    }
+}
+/* ------ Small Screen Styles ------ */
+@media screen and (min-width: 500px) {
+    header div{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        column-gap: 1rem;
+    }
+    h1{
+        text-align: left;
+        font-size: 2rem;
+    }
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 5px;
+    }
+}
+/* ------ Medium Screen Styles ------ */
+@media screen and (min-width: 650px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    header img{
+    max-width: 200px;
+    }
+    header h1, p{
+     width: 100%;
+    }
+    #plan{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.5rem;
+    }
+      
+    #plan h2{
+        grid-column: 1 / -1;
+    }
+
+    #plan section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    #plan a{
+    box-shadow: none;
+    }
+
+    #testimonials{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    }
+
+    #testimonials h2{
+    grid-column: 1 / -1;
+    }
+
+    #testimonials section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    #testimonials a{
+    box-shadow: none;
+    }
+    #about{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #about p:first-of-type{ 
+    grid-column: 1 / 3;
+    }
+
+    #about p:last-of-type{
+    grid-column: 3 / span 2;
+    }
+
+    footer div{
+    display: grid;
+    grid-gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+}
+
+/* ----- Tablet SCREEN STYLES ----- */
+@media screen and (min-width: 750px){
+    header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+    header h2, header img{
+    grid-column: 1/ -1;
+    }
+
+    header img{
+    margin: 0;
+    max-width: 200px;
+    }
+
+    #plan, #testimonials{
+    grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ----- LARGE SCREEN STYLES ----- */
+@media screen and (min-width: 980px){
+    footer a, footer span{
+    padding: 0;
+    }
+}
+
+/* ----- EXTRA LARGE SCREEN STYLES ----- */
+@media screen and (min-width: 1250px){
+    header{  
+    display: grid;
+    grid-gap: 0rem;
+    }
+
+    nav{ 
+    grid-column: auto;
+    }
+
+    nav ul{
+    grid-gap: 1rem;
+    }
+    
+    p{
+    font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
